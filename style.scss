@@ -1,0 +1,53 @@
+html
+{
+  padding: 0;
+  margin: 0;
+}
+
+body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+}
+
+svg#view
+{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+
+  g.chip
+  {
+    use
+    {
+      stroke: #d3d7cf;
+      stroke-width: 2;
+      fill: #eeeeec;
+      transition: stroke .15s ease-in-out;
+      transition: stroke-width .15s ease-in-out;
+    }
+
+    circle.core
+    {
+      fill: #babdb6;
+      opacity: 0.0;
+      transition: opacity .25s ease-in-out;
+    }
+
+    &:hover
+    {
+      use
+      {
+        stroke: #babdb6;
+        stroke-width: 3;
+      }
+
+      circle.core
+      {
+        opacity: 1.0;
+      }
+    }
+  }
+}
